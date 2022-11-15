@@ -1,0 +1,7 @@
+{
+  "name": "Crypto Tracker",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
