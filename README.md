@@ -1,5 +1,7 @@
 # Crypto Portfolio Tracker
 
+![ct](https://user-images.githubusercontent.com/27581049/202294735-bd7d84a6-15e5-4549-945c-090182f7f429.gif)
+
 # Crypto Portfolio Tracker Plugin List
 
 ### [1- Resources](https://capacitorjs.com/docs/guides/splash-screens-and-icons)<br/>
