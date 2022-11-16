@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      {{constants.pages.home.title}}
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-condense-header [title]="constants.pages.home.title"></app-condense-header>
+
+  <app-balance [title]="constants.pages.home.myBalance"
+               [portfolioValue]="'$' + constants.data.portfolio.value.toFixed(2)"
+               [portfolioProfit]="constants.data.portfolio.profit"
+               [portfolioCost]="constants.pages.home.portfolioCost + ' $' + constants.data.portfolio.cost"></app-balance>
+
+  <app-portfolio [title]="constants.pages.home.myPortfolio"
+                 [portfolioCoins]="constants.data.portfolio.coins"></app-portfolio>
+
+  <ion-list>
+    <ion-list-header>{{constants.pages.home.top10}}</ion-list-header>
+    <app-coin-card *ngFor="let coin of constants.data.top10" [coin]="coin"></app-coin-card>
+  </ion-list>
+
+</ion-content>

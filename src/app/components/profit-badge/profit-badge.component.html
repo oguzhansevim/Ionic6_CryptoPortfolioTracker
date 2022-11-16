@@ -1,0 +1,4 @@
+<ion-badge [color]="profit > 0 ? 'success' : profit === 0 ? 'primary' : 'danger'">
+  <ion-icon [name]="profit > 0 ? 'arrow-up' : profit === 0 ? 'remove' : 'arrow-down'"></ion-icon>
+  {{profit.toFixed(2)}} %
+</ion-badge>

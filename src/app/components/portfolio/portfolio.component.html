@@ -1,0 +1,24 @@
+<ion-list>
+  <ion-list-header>{{title}}</ion-list-header>
+
+  <swiper class="swiper-container">
+    <ng-template swiperSlide *ngFor="let coin of portfolioCoins">
+      <ion-card>
+        <ion-item class="ion-margin-vertical">
+          <ion-label [slot]="'start'">
+            <p>{{coin.name}}</p>
+            <h1><b>{{coin.symbol}}</b></h1>
+          </ion-label>
+          <img [slot]="'end'" [width]="32" [src]="coin.icon"/>
+        </ion-item>
+        <ion-header class="ion-margin-bottom">
+          <ion-item>
+            <ion-card-title [slot]="'start'">$ {{coin.value.toFixed(2)}}</ion-card-title>
+            <app-profit-badge [slot]="'end'" [profit]="((coin.value - coin.cost) / coin.cost * 100)"></app-profit-badge>
+          </ion-item>
+        </ion-header>
+      </ion-card>
+    </ng-template>
+  </swiper>
+
+</ion-list>

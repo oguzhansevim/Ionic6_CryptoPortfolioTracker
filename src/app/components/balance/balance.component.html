@@ -1,0 +1,10 @@
+<ion-card class="ion-padding-bottom">
+  <ion-card-header>
+    <ion-card-subtitle>{{title}}</ion-card-subtitle>
+  </ion-card-header>
+  <ion-item>
+    <ion-card-title [slot]="'start'">{{portfolioValue}}</ion-card-title>
+    <app-profit-badge [slot]="'end'" [profit]="portfolioProfit"></app-profit-badge>
+  </ion-item>
+  <ion-card-subtitle class="ion-margin-start">{{portfolioCost}}</ion-card-subtitle>
+</ion-card>

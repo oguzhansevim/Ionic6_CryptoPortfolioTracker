@@ -1,0 +1,13 @@
+<ion-card>
+  <ion-item>
+    <img [slot]="'start'" [height]="32" [src]="coin.icon"/>
+    <ion-label>
+      {{coin.name}}
+      <p>{{coin.symbol}}</p>
+    </ion-label>
+    <ion-label [slot]="'end'" class="ion-text-center">
+      <h2 class="ion-margin-bottom"><b>$ {{coin.price}}</b></h2>
+      <app-profit-badge [profit]="coin.change"></app-profit-badge>
+    </ion-label>
+  </ion-item>
+</ion-card>
